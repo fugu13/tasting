@@ -37,7 +37,6 @@ class Needs:
 
 class NeedsGenerator:
     def __getattr__(self, name: str) -> Needs:
-        print("Getting!", name)
         return Needs(name)
 
 
