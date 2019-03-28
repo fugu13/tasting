@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/fugu13/tasting",
     packages=setuptools.find_packages(),
+    entry_points={"pytest11": ["tasting = tasting.pytest"]},
     install_requires=[
         "attrs"
     ],

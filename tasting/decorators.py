@@ -1,3 +1,5 @@
+import tasting
+
 import attr
 from typing import TypeVar, Callable
 
@@ -12,7 +14,13 @@ def checkpoint(description: str) -> Callable[[Callable[..., RT]], Callable[..., 
     :param description: A human-readable description for identifying the functionality.
 
     """
-    pass
+
+    def decorate(func):
+        if tasting.TASTE_CHECKING:
+            return None
+        return func
+
+    return decorate
 
 
 @attr.s(init=False)
@@ -32,7 +40,12 @@ class Needs:
         self.name = name
 
     def __call__(self, reason: str):
-        pass
+        def decorate(func):
+            if tasting.TASTE_CHECKING:
+                return None
+            return func
+
+        return decorate
 
 
 class NeedsGenerator:

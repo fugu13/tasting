@@ -9,5 +9,8 @@
 """
 from .decorators import checkpoint, needs
 
+# determines if tasting will happen. Is there a better way to do this?
+TASTE_CHECKING = False
 
-__all__ = ["checkpoint", "needs"]
+
+__all__ = ["checkpoint", "needs", "TASTE_CHECKING"]
