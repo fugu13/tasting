@@ -31,4 +31,4 @@ Any checkpoint that calls the function (directly or indirectly) will be reported
 Run pytest with the ``--tasting`` flag
 --------------------------------------------
 
-This generates a report in TODO documenting all checkpoints that involve code needing QA attention.
+This generates a report named ``tasting.output`` containing all combinations of needs and checkpoints encountered during execution.
