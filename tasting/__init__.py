@@ -7,10 +7,12 @@
 .. moduleauthor:: Russell Duhon <fugu13@gmail.com>
 
 """
-from .decorators import checkpoint, needs
+from .decorators import Checkpoint, needs
+from .report import results
 
+checkpoint = Checkpoint  # rename to be function-like
 # determines if tasting will happen. Is there a better way to do this?
 TASTE_CHECKING = False
 
 
-__all__ = ["checkpoint", "needs", "TASTE_CHECKING"]
+__all__ = ["checkpoint", "needs", "results", "TASTE_CHECKING"]
