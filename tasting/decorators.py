@@ -53,10 +53,11 @@ class Needs(NamedTuple):
     name: str
 
     def __call__(self, reason: str):
-        return NeedsDecorator(reason)
+        return NeedsDecorator(self.name, reason)
 
 
 class NeedsDecorator(NamedTuple):
+    name: str
     reason: str
 
     def __call__(self, func):
