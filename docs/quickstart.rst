@@ -32,3 +32,15 @@ Run pytest with the ``--tasting`` flag
 --------------------------------------------
 
 This generates a report named ``tasting.output`` containing all combinations of needs and checkpoints encountered during execution.
+
+.. code-block:: json
+
+   {
+     "results": [
+       {
+         "needs": "qa",
+         "reason": "Now make slugs with a different algorithm",
+         "checkpoint": "Create or Update Blog Posts"
+       }
+     ]
+   }
